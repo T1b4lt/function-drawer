@@ -57,7 +57,7 @@ def main(cliargs):
 	normalized_y = scaler_y.transform(y_values)
 
 	for i in range(len(normalized_x)):
-		x_value, y_value = to_pygame((normalized_x[i], normalized_y[i]), 500)
+		x_value, y_value = to_pygame((normalized_x[i], normalized_y[i]), screen_shape[1])
 		print(x_value, y_value)
 		pygame.draw.rect(screen, (255, 255, 255), (x_value, y_value, 10, 10))
 
